@@ -9,7 +9,7 @@
 
 // Load the data
 const cardsContainer = document.getElementById("cardsContainer");
-const timeTrackerPromise = fetch("/data.json"); // for Github Pages
+const timeTrackerPromise = fetch("./data.json"); // for Github Pages
 // const timeTrackerPromise = fetch("/data.json"); // for Local server
 const primaryColors = [
   "--Orange-300",
