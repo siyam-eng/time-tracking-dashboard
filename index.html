@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
+
+    <style type="text/tailwindcss">
+      :root {
+        --Purple-600: hsl(246, 80%, 60%);
+
+        /* Primary */
+        --Orange-300: hsl(15, 100%, 70%);
+        --Blue-300: hsl(195, 74%, 62%);
+        --Pink-400: hsl(348, 100%, 68%);
+        --Green-400: hsl(145, 58%, 55%);
+        --Purple-700: hsl(264, 64%, 52%);
+        --Yellow-300: hsl(43, 84%, 65%);
+
+        /* Neutral */
+        --Navy-950: hsl(226, 43%, 10%);
+        --Navy-900: hsl(235, 46%, 20%);
+        --Purple-500: hsl(235, 45%, 61%);
+        --Navy-200: hsl(236, 100%, 87%);
+      }
+    </style>
+  </head>
+  <body class="bg-(--Navy-950) text-white font-[Rubik]">
+    <main class="py-15">
+      <section class="bg-(--Navy-900) w-9/10 mx-auto rounded-xl my-3">
+        <div class="bg-(--Purple-600) flex p-7 gap-6 rounded-xl">
+          <img
+            src="./images/image-jeremy.png"
+            alt=""
+            class="w-[4rem] border-3 border-white rounded-[50%]"
+          />
+          <div class="">
+            <p class="text-sm text-(--Navy-200)">Report for</p>
+            <h1 class="text-2xl">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="p-5 text-lg flex justify-evenly text-(--Navy-200)">
+          <!-- Do I need to use radio buttons or can I just use click events? -->
+          <!-- <label for="daily"><input type="radio" id="daily"name="frequency"  class="">Daily</label>
+          <label for="weekly"><input type="radio" name="frequency" id="weekly" class="">Weekly</label>
+          <label for="monthly"><input type="radio" id="monthly" name="frequency" class="">Monthly</label>
+            -->
+          <button id="daily" class="">Daily</button>
+          <button id="weekly" class="text-white">Weekly</button>
+          <button id="monthly" class="">Monthly</button>
+        </div>
+      </section>
+
+      <!-- Add a ::before to insert the image on top -->
+      <div id="cardsContainer" class="">
+<!-- It is dynamically filled up by JS -->
+        <!-- <section class="bg-(--Orange-300) flex flex-col w-9/10 rounded-xl mx-auto my-8 overflow-hidden">
+          <i class="self-end me-3 "><img src="./images/icon-work.svg" alt="" class="h-[2.5rem] w-[6rem] object-cover" /></i>
+          <div
+            class="flex justify-between p-8 bg-(--Navy-900) rounded-xl"
+          >
+            <div>
+              <p class="font-bold text-xl" id="category">Work</p>
+              <h1 class="text-3xl mt-2" id="hours">32hrs</h1>
+            </div>
+            <a class="" href="#"
+              ><div class="text-(--Navy-200) flex flex-col items-end gap-8">
+                <img src="./images/icon-ellipsis.svg" alt="" class="" />
+                <p class="last-week">Last week - 36hrs</p>
+              </div></a
+            >
+          </div>
+      </section> -->
+      </div>
+      
+
+    </main>
+  </body>
+</html>
+
+<!-- TODO: Use Google Calendar API to bring your daily time logs and take the data from there  -->
