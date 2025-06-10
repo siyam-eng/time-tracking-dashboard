@@ -9,7 +9,7 @@
 
 // Load the data
 const cardsContainer = document.getElementById("cardsContainer");
-const timeTrackerPromise = fetch("http://127.0.0.1:5500/data.json");
+const timeTrackerPromise = fetch("/data.json");
 const primaryColors = [
   "--Orange-300",
   "--Blue-300",
