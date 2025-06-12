@@ -9,7 +9,7 @@
 
 // Load the data
 const cardsContainer = document.getElementById("cardsContainer");
-const timeTrackerPromise = fetch("/time-tracking-dashboard/data.json"); // for Github Pages
+const timeTrackerPromise = fetch("https://siyam-eng.github.io/time-tracking-dashboard/data.json"); // for Github Pages
 // const timeTrackerPromise = fetch("/data.json"); // for Local server
 const primaryColors = [
   "--Orange-300",
@@ -44,21 +44,18 @@ function appendComponent(i, obj) {
   }
   const svgFileName = obj.title.toLowerCase().replace(" ", "-");
   const component = `
-        <section class="bg-(${primaryColors[i]}) flex flex-col w-9/10 rounded-xl mx-auto my-8 overflow-hidden">
+        <section class="bg-(${primaryColors[i]}) flex flex-col w-9/10 rounded-xl mx-auto overflow-hidden">
           <i class="self-end me-3"><img src="./images/icon-${svgFileName}.svg" alt="" class="h-[2.5rem] w-[6rem] object-cover"/></i>
           <div
-            class="flex justify-between p-8 bg-(--Navy-900) rounded-xl"
+            class="flex justify-between p-8 bg-(--Navy-900) rounded-xl lg:flex-col relative"
           >
             <div>
               <p class="font-bold text-xl" id="category">${obj.title}</p>
-              <h1 class="text-3xl mt-2" id="hours">${timeframe.current}hrs</h1>
+              <h1 class="text-3xl mt-2 lg:text-5xl lg:my-5" id="hours">${timeframe.current}hrs</h1>
             </div>
-            <a class="" href="#"
-              ><div class="text-(--Navy-200) flex flex-col items-end gap-8">
-                <img src="./images/icon-ellipsis.svg" alt="" class="" />
-                <p class="last-week">${lastTimeText} - ${timeframe.previous}hrs</p>
-              </div></a
-            >
+            <img src="./images/icon-ellipsis.svg" alt="" class="absolute right-8" />
+
+                <p class="self-end lg:self-start text-(--Navy-200) lg:mt-3">${lastTimeText} - ${timeframe.previous}hrs</p>
           </div>
         </section>
        `;
